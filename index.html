@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    main {
+      width: 960px;
+      margin: 100px 0 0;
+    }
+    #box-carousel {
+      width: 640px;
+      margin: 0 auto;
+      margin-top: 50px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+    #carousel {
+      cursor: move;
+      box-sizing: border-box;
+      display: inline-block;
+      white-space: nowrap;
+      user-select:none;
+      background-color: #888;
+      font-size: 0;
+      transition-property: transform;
+      transition-duration: .5s;
+      transition-timing-function:cubic-bezier(0,1.22,.99,.92);
+    }
+    #carousel > li{
+      display: inline-block;
+      width: 200px;
+      background-color: yellow;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      text-align: center;
+      margin-right: 10px;
+    }
+    li::last-child{
+      margin-right: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div id="box-carousel">
+        <ul id="carousel">
+          <li>
+            <div class="item">
+              <p>要素１</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素２</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素３</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素４</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素５</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素６</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素７</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素８</p>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <p>要素９</p>
+            </div>
+          </li>
+        </ul>
+  
+    </div>
+  </main>
+
+<!-- js -->
+  <script src="js/carousel.js"></script>
+  <script>
+  window.onload=function(){
+      
+    var target = document.querySelector("#carousel");
+
+    target.addEventListener("mousedown",carousel,false);
+    
+    // $(".btn").on("click",function(){
+    //     console.log("click!!");
+    //     $(this).css("background-color","#ccc")
+    // })
+      
+  };
+  </script>
+</body>
+</html>
